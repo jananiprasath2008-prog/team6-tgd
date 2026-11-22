@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10261f">
+  <title>The Great Derangement: Save Our Tomorrow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="game-shell">
+    <header class="topbar">
+      <button id="homeBtn" class="brand" aria-label="Go to menu">
+        <span class="brand-mark">G</span>
+        <span><strong>GREAT DERANGEMENT</strong><small>ENVIRONMENTAL GUARDIAN</small></span>
+      </button>
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">♫</button>
+        <div class="score-pill"><small>SCORE</small><strong id="scoreTop">0</strong></div>
+      </div>
+    </header>
+
+    <section id="menuScreen" class="screen menu-screen active">
+      <div class="menu-copy">
+        <div class="eyebrow">RADIO 111.66 PRESENTS</div>
+        <h1>THE GREAT<br><em>DERANGEMENT</em></h1>
+        <p class="subtitle">SAVE OUR TOMORROW</p>
+        <p class="tagline">Every Choice Shapes Our Planet.</p>
+        <button id="startBtn" class="primary-btn">BEGIN THE JOURNEY <span>→</span></button>
+        <button id="continueBtn" class="text-btn" hidden>CONTINUE SAVED JOURNEY</button>
+      </div>
+      <div class="planet" aria-label="Illustration of a threatened planet">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="globe">
+          <div class="continent c1"></div><div class="continent c2"></div>
+          <div class="continent c3"></div><div class="continent c4"></div>
+        </div>
+        <div class="guardian"><span class="cape"></span><span class="head"></span></div>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen">
+      <aside class="level-rail">
+        <div id="levelSteps"></div>
+      </aside>
+      <div class="game-main">
+        <div class="level-header">
+          <div>
+            <span id="levelNumber" class="level-number"></span>
+            <h2 id="levelTitle"></h2>
+          </div>
+          <div id="timerBox" class="timer" hidden><span>TIME</span><strong id="timer">30</strong></div>
+        </div>
+
+        <div class="world-card">
+          <div id="worldArt" class="world-art"></div>
+          <div class="broadcast">
+            <span class="radio-wave">)))</span>
+            <div><small>RADIO 111.66</small><p id="broadcastText"></p></div>
+          </div>
+        </div>
+
+        <div id="challenge" class="challenge"></div>
+        <div class="stats-bar">
+          <span>Awareness <strong id="awarenessScore">0</strong></span>
+          <span>Cooperation <strong id="cooperationScore">0</strong></span>
+          <span>Total <strong id="totalScore">0</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="endingScreen" class="screen ending-screen">
+      <div class="ending-content">
+        <div class="ending-radio">111.66</div>
+        <p class="eyebrow">MISSION REPORT</p>
+        <h2 id="endingTitle">THE FUTURE IS OURS</h2>
+        <div id="townResult" class="town-result"></div>
+        <blockquote>“THE FUTURE IS NOT SOMETHING WE WAIT FOR. IT IS SOMETHING WE HELP SHAPE.”</blockquote>
+        <div class="ending-stats">
+          <div><small>TOWN CONDITION</small><strong id="townCondition">—</strong></div>
+          <div><small>FINAL SCORE</small><strong id="finalScore">0</strong></div>
+        </div>
+        <div id="badges" class="badges"></div>
+        <div class="ending-actions">
+          <button id="restartBtn" class="primary-btn">PLAY AGAIN</button>
+          <button id="actionBtn" class="text-btn">I WILL TAKE ACTION</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
